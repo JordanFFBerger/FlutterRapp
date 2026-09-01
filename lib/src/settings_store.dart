@@ -17,6 +17,8 @@ class SettingsStore {
       );
     } on FormatException {
       return const MorningSettings();
+    } on TypeError {
+      return const MorningSettings();
     }
   }
 
