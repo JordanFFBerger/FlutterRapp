@@ -1,5 +1,5 @@
 name: morning_message
-description: Schedule a thoughtful good morning message for the people you care about.
+description: A minimal Flutter app with one button.
 publish_to: none
 version: 1.0.0+1
 
@@ -9,12 +9,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
-  flutter_local_notifications: ^19.4.1
-  flutter_timezone: ^4.1.1
-  shared_preferences: ^2.5.3
-  timezone: ^0.10.1
-  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:

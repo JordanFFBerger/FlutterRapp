@@ -1,42 +1,38 @@
 import 'package:flutter/material.dart';
 
-import 'src/home_page.dart';
-import 'src/settings_store.dart';
-
 void main() {
-  runApp(const MorningMessageApp());
+  runApp(const SingleButtonApp());
 }
 
-class MorningMessageApp extends StatelessWidget {
-  const MorningMessageApp({super.key});
+class SingleButtonApp extends StatelessWidget {
+  const SingleButtonApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Morning Message',
+      title: 'Single Button',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFFF5A623),
-          brightness: Brightness.light,
-        ),
-        scaffoldBackgroundColor: const Color(0xFFFFFBF3),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
-        inputDecorationTheme: const InputDecorationTheme(
-          filled: true,
-          fillColor: Colors.white,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(Radius.circular(18)),
-            borderSide: BorderSide.none,
-          ),
-        ),
-        cardTheme: const CardThemeData(
-          color: Colors.white,
-          elevation: 0,
-          margin: EdgeInsets.zero,
+      ),
+      home: const SingleButtonPage(),
+    );
+  }
+}
+
+class SingleButtonPage extends StatelessWidget {
+  const SingleButtonPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: FilledButton(
+          onPressed: () {},
+          child: const Text('Button'),
         ),
       ),
-      home: HomePage(store: SettingsStore()),
     );
   }
 }
